@@ -40,6 +40,14 @@ class Cart:
         results = [item for item in self.items if title.lower() in item.title.lower()]
         return results
 
+    def sort_by_title(self):
+        """Sắp xếp các DVD trong giỏ hàng theo tiêu đề (alphabet)"""
+        self.items.sort(key=lambda dvd: dvd.title.lower())
+
+    def sort_by_cost(self):
+        """Sắp xếp các DVD trong giỏ hàng theo chi phí (tăng dần)"""
+        self.items.sort(key=lambda dvd: dvd.cost)
+
 
 def calculate_discount(total, percent):
     """Tính toán tổng tiền sau khi giảm giá và kiểm tra hợp lệ phần trăm."""
