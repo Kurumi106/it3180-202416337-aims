@@ -34,3 +34,8 @@ class Cart:
             print(f"{i}. {item}")
         print(f"Total cost: {self.total_cost()} $")
         print("**************************************************")
+
+    def search_by_title(self, title):
+        """Tìm kiếm DVD trong giỏ hàng theo tiêu đề (hỗ trợ tìm gần đúng)."""
+        results = [item for item in self.items if title.lower() in item.title.lower()]
+        return results

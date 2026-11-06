@@ -17,6 +17,14 @@ def main():
     print("\n--- Danh sach trong gio hang ---")
     cart.print_cart()
 
+    print("\n--- Ket qua tim kiem theo tieu de ('lion') ---")
+    results = cart.search_by_title("lion")
+    if results:
+        for item in results:
+            print(item)
+    else:
+        print("No match found!")
+
 
 if __name__ == "__main__":
     main()
