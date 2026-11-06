@@ -39,3 +39,11 @@ class Cart:
         """Tìm kiếm DVD trong giỏ hàng theo tiêu đề (hỗ trợ tìm gần đúng)."""
         results = [item for item in self.items if title.lower() in item.title.lower()]
         return results
+
+
+def calculate_discount(total, percent):
+    """Tính toán tổng tiền sau khi giảm giá và kiểm tra hợp lệ phần trăm."""
+    if percent < 0 or percent > 100:
+        raise ValueError("Percent must be between 0 and 100")
+    discounted_total = total * (100 - percent) / 100
+    return discounted_total
