@@ -3,6 +3,7 @@ from aims.dvd import DigitalVideoDisc
 
 
 def main():
+    print("=== AIMS-mini v1.0.0 ===")
     cart = Cart()
     cart.add_dvd(
         DigitalVideoDisc(
